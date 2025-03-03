@@ -1,12 +1,5 @@
 <div>
     <div>
-        <div class="available-spins">
-            <span class="spins-count">Available Spins: {{ $availableSpins }}</span>
-            @if($availableSpins <= 0)
-                <div class="no-spins-warning">{{ $noSpinsMessage }}</div>
-            @endif
-
-        </div>
         <div class="flex items-center justify-center">
             <select wire:model.live="selectedMachine" class="my-4 bg-white px-4 py-2 rounded-md shadow-sm text-sm font-medium text-gray-900 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500">
                 @foreach(\App\Models\SlotMachine::all() as $machine)
@@ -14,7 +7,7 @@
                 @endforeach
             </select>
         </div>
-        
+
 
         <div class="slot-machine" >
             <div wire:ignore>

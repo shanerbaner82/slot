@@ -2,6 +2,4 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/slots/{slotMachine:name}', \App\Livewire\Machine::class)->name('slots');
